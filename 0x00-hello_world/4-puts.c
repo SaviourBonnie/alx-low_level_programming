@@ -1,2 +1,14 @@
 #!/bin/bash
-puts("Programming is like building a multilingal puzzle\n"); return (0);
+
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Aways 0 (Success)
+ */
+int main(void)
+{
+	puts("Programming is like building a multilingual puzzle\n");
+	return (0);
+}
