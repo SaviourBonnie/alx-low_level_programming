@@ -1,20 +1,22 @@
 #include <stdio.h>
-/**
- * main - entry point
- * Description: Prints the alphabet in lowercase using putchar
- * Return: 0 (success)
- */
 
+/**
+ * main - Entry point
+ *
+ * Description: Prints the lowercase alphabet followed by a new line
+ *              using the putchar function.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    char c = 'a';
+	char letter;
 
-    while (c <= 'z')
-    {
-        putchar(c);
-        c++;
-    }
-    putchar('\n');
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
 
-    return (0);
+	putchar('\n');
+
+	return (0);
 }
+
