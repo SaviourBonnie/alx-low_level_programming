@@ -14,11 +14,12 @@ int main(void)
     int last_digit;
 
     srand(time(0)); /* Seed rand */
+
     n = rand() - RAND_MAX / 2; /* Assign random number between -RAND_MAX/2 and RAND_MAX/2 */
 
     last_digit = abs(n % 10); /* Get the absolute value of last digit */
 
-    printf("Last digit of %d is %d ", n, -last_digit);
+    printf("Last digit of %d is %d ", n, last_digit);
 
     if (last_digit > 5)
     {
@@ -33,5 +34,5 @@ int main(void)
         printf("and is less than 6 and not 0\n");
     }
 
-    return 0;
+    return (0);
 }
