@@ -3,36 +3,29 @@
 #include <time.h>
 
 /**
- * main - Prints the last digit of a randomly generated number
+ * main - Entry point
+ *
+ * Description: Generates a random number and prints its last digit.
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-    int n;
-    int last_digit;
+	int n, last_digit;
 
-    srand(time(0)); /* Seed rand */
+	srand(time(0));
+	n = rand();
+	last_digit = n % 10;
 
-    n = rand() - RAND_MAX / 2; /* Assign random number between -RAND_MAX/2 and RAND_MAX/2 */
+	printf("Last digit of %d is %d", n, last_digit);
 
-    last_digit = abs(n % 10); /* Get the absolute value of last digit */
+	if (last_digit > 5)
+		printf(" and is greater than 5\n");
+	else if (last_digit == 0)
+		printf(" and is 0\n");
+	else
+		printf(" and is less than 6 and not 0\n");
 
-    printf("Last digit of %d is %d ", n, last_digit);
-
-    if (last_digit > 5)
-    {
-        printf("and is greater than 5\n");
-    }
-    else if (last_digit == 0)
-    {
-        printf("and is 0\n");
-    }
-    else
-    {
-        printf("and is less than 6 and not 0\n");
-    }
-
-    return (0);
+	return (0);
 }
+
