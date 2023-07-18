@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -S "$CFILE" -o "${CFILE%.c}.s"
+gcc -S -masm=intel "$c_file" -o "$base_name.s"
