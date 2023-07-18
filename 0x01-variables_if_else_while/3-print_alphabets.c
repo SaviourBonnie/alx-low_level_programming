@@ -3,23 +3,23 @@
 /**
  * main - Entry point
  *
- * Description: Prints the lowercase and uppercase alphabets
- *              followed by a new line using putchar.
+ * Description: Prints the alphabet in lowercase, uppercase,
+ *              and a newline using putchar.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char letter;
+    char c;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);
+    for (c = 'a'; c <= 'z'; c++)
+        putchar(c);
 
-	for (letter = 'A'; letter <= 'Z'; letter++)
-		putchar(letter);
+    for (c = 'A'; c <= 'Z'; c++)
+        putchar(c);
 
-	putchar('\n');
+    putchar('\n');
 
-	return (0);
+    return (0);
 }
 }
