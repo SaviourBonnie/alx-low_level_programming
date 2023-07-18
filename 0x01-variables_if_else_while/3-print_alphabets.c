@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Prints the alphabet in lowercase, uppercase,
- *              and a newline using putchar.
+ * Description: Prints the alphabet in lowercase, uppercase, and newline using putchar
  *
  * Return: Always 0 (Success)
  */
@@ -22,4 +21,4 @@ int main(void)
 
     return (0);
 }
-}
+
