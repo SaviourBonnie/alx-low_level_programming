@@ -15,5 +15,11 @@ int largest_number(int a, int b, int c);
 
 // Add any other existing function prototypes or declarations below this line if they exist
 
+#ifndef MAIN_H
+#define MAIN_H
+
+int largest_number(int, int, int);
+
+
 #endif /* MAIN_H */
 
