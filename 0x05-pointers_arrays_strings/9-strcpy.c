@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src)
 	dest_ptr++;
 	}
 
-	*dest_ptr = '\0'; /* Add the terminating null byte to the destination string */
+	*dest_ptr = '\0'; /* Add the terminating null byte */
 
 	return (dest);
 }
