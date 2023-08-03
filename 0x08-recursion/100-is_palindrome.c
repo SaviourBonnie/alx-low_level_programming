@@ -14,7 +14,7 @@ int _strlen(char *s)
 	}
 
 	/* Recursive case: Increment the length by 1 and call the function */
-	return 1 + _strlen(s + 1);
+	return (1 + _strlen(s + 1));
 }
 
 /**
