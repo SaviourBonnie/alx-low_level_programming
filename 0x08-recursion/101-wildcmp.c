@@ -12,11 +12,11 @@ int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*') /* If the second string starts with */
 	{
-		if (*(s2 + 1) == '*') /* If the second string has more * consecutively, skip them. */
+		if (*(s2 + 1) == '*') /* If the second string has more * consecutively */
 		{
 			return (wildcmp(s1, s2 + 1));
 		}
-		else if (*(s2 + 1) == '\0') /* If the second string ends with *, they match. */
+		else if (*(s2 + 1) == '\0') /* If the second string ends with */
 		{
 			return (1);
 		}
@@ -24,13 +24,13 @@ int wildcmp(char *s1, char *s2)
 		{
 			return (0);
 		}
-		else /* Recursively check the firste current * in the second string. */
+		else /* Recursively check the firste current * string. */
 		{
 			return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
 		}
 	}
 
-	if (*s1 == *s2) /* If the characters match, continue checking the rest of the strings. */
+	if (*s1 == *s2) /* If the characters match, continue chec. */
 	{
 		if (*s1 == '\0') /* If both strings reach the end, they match. */
 		{
@@ -44,4 +44,3 @@ int wildcmp(char *s1, char *s2)
 
 	return (0); /* Characters don't match, return 0. */
 }
-
