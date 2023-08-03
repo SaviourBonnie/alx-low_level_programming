@@ -11,15 +11,15 @@ int find_sqrt(int n, int i)
 {
 	if (i * i == n) /* If the square of i is equal to n, */
 	{
-		return i;
+		return (i);
 	}
 	else if (i * i > n) /* If the square of i is greater than n. */
 	{
-		return -1;
+		return (-1);
 	}
 
 	/* Recursive case: Increment i and call the function. */
-	return find_sqrt(n, i + 1);
+	return (find_sqrt(n, i + 1));
 }
 
 /**
@@ -32,9 +32,9 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0) /* Base case: If n is negative, no natural square root exists. */
 	{
-		return -1;
+		return (-1);
 	}
 
 	/* Call the helper function with initial value of i set to 0. */
-	return find_sqrt(n, 0);
+	return (find_sqrt(n, 0));
 }
