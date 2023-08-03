@@ -8,33 +8,31 @@
  */
 int _strlen(char *s)
 {
-	int length = 0;
-
-	while (*s)
+	if (*s == '\0') /* Base case: If we reach the end of the string, return 0. */
 	{
-		length++;
-		s++;
+		return 0;
 	}
 
-	return length;
+	/* Recursive case: Increment the length by 1 and call the function */
+	return 1 + _strlen(s + 1);
 }
 
 /**
- * is_palindrome_helper - Helper function to check if a string is a palindrome.
+ * is_palindrome_helper - Helper function to check if a string.
  * @s: The string to be checked.
  * @start: The start index of the string.
  * @end: The end index of the string.
-i *
+ *
  * Return: 1 if the string is a palindrome, otherwise 0.
  */
 int is_palindrome_helper(char *s, int start, int end)
 {
-	if (start >= end) /* Base case: If the start index is greater*/
+	if (start >= end) /* Base case: If the start index is greater */
 	{
 		return (1);
 	}
 
-	if (s[start] != s[end]) /* If the characters don't match, it's not a palindrome. */
+	if (s[start] != s[end]) /* If the characters don't match*/
 	{
 		return (0);
 	}
@@ -56,4 +54,3 @@ int is_palindrome(char *s)
 	/* Call the helper function to check if the string is a palindrome. */
 	return (is_palindrome_helper(s, 0, length - 1));
 }
-
