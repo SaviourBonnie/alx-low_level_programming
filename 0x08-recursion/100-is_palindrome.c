@@ -10,7 +10,7 @@ int _strlen(char *s)
 {
 	if (*s == '\0') /* Base case: If we reach the end of the string, return 0. */
 	{
-		return 0;
+		return (0);
 	}
 
 	/* Recursive case: Increment the length by 1 and call the function */
