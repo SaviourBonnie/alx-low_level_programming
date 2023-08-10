@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 
 	concatenated = (char *)malloc(total_length * sizeof(char));
 	if (concatenated == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < len1; i++)
 	{
@@ -44,5 +44,5 @@ char *str_concat(char *s1, char *s2)
 
 	concatenated[i + j] = '\0'; /* Null-terminate the concatenated string */
 
-	return concatenated;
+	return (concatenated);
 }
