@@ -4,13 +4,13 @@
 int **alloc_grid(int width, int height)
 {
 	if (width <= 0 || height <= 0)
-		return NULL;
+		return (NULL);
 
 	int **grid = (int **)malloc(height * sizeof(int *));
 	if (grid == NULL)
-		return NULL;
+		return (NULL);
 
-	int i, j;	/* Declare variables before C90-style for loop */
+	int i, j;	/* Declare variables before loop */
 
 	for (i = 0; i < height; i++)
 	{
@@ -21,7 +21,7 @@ int **alloc_grid(int width, int height)
 			for (j = 0; j < i; j++)
 				free(grid[j]);
 			free(grid);
-			return NULL;
+			return (NULL);
 		}
 
 		for (j = 0; j < width; j++)
@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 		}
 	}
 
-	return grid;
+	return (grid);
 }
 
 int main()
@@ -43,11 +43,11 @@ int main()
 	if (grid == NULL)
 	{
 		printf("Memory allocation failed.\n");
-		return 1;
+		return (1);
 	}
 
 	/* Printing the allocated grid */
-	int i, j; /* Declare variables before C90-style for loop */
+	int i, j; /* Declare variables before loop */
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
@@ -64,5 +64,6 @@ int main()
 	}
 	free(grid);
 
-	return 0;
+	return (0);
 }
+
