@@ -1,22 +1,22 @@
 #include <stddef.h>
 #include <stdlib.h>
-#include "main.h" /* Include the header file*/
+#include "main.h"
 
 char *create_array(unsigned int size, char c)
 {
+	char *array;
+
 	if (size == 0)
-		return (NULL);
+		return NULL;
 
-	char *array = (char *)malloc(size * sizeof(char));
+	array = (char *)malloc(size * sizeof(char));
 	if (array == NULL)
-		return (NULL);
+		return NULL;
 
+	unsigned int i;
+	for (i = 0; i < size; i++)
 	{
-		unsigned int i; /*Declare i in a separate block*/
-		for (i = 0; i < size; i++)
-		{
-			array[i] = c;
-		}
+	    	array[i] = c;
 	}
 
 	return (array);
