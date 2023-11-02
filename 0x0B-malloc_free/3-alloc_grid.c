@@ -7,7 +7,8 @@
  *
  * Return: Pointer to the 2D grid or NULL on failure
  */
-int **alloc_grid(int width, int height) {
+int **alloc_grid(int width, int height)
+{
 	int **grid;
 	int i, j;
 
@@ -18,9 +19,11 @@ int **alloc_grid(int width, int height) {
 	if (grid == NULL)
 		return (NULL);
 
-	for (i = 0; i < height; i++) {
+	for (i = 0; i < height; i++)
+	{
 		grid[i] = (int *)malloc(width * sizeof(int));
-		if (grid[i] == NULL) {
+		if (grid[i] == NULL)
+		{
 			for (j = 0; j < i; j++)
 				free(grid[j]);
 			free(grid);
